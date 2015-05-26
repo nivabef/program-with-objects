@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<!--Notes for Stage 3 only-->
+<head> 
+  <title>Introduction to Programming Nanodegree Stage 3 Notes</title>   
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="section">
+    <h1>Introduction to Programming Nanodegree<br>Stage 3 Notes</h1>
+  </div>
+  <div class="section">
+    <h1>Table of Contents</h1>
+    <div class="toc-sub">
+      <div class="toc-lesson">
+        <a href="#lesson-3.1">3.1: Introduction to Abstraction</a>
+        <ul>
+          <li><a href="#lesson-3.1-1">Review of If Statements, Loops and Functions</a></li>
+        </ul>
+      </div>
+      <div class="toc-lesson">
+        <a href="#lesson-3.2">3.2: Use Functions</a>
+        <ul>
+          <li><a href="#lesson-3.2-1">Launching Python (Mac)</a></li>
+          <li><a href="#lesson-3.2-2">Python Code to Open Website in a New Web Browser Window</a></li>
+          <li><a href="#lesson-3.2-3">Python Code to Suspend the Program for a Given Time</a>
+          <li><a href="#lesson-3.2-4">Python Standard Library</a></li>
+          <li><a href="#lesson-3.2-5">Abstraction</a></li>
+          <li><a href="#lesson-3.2-6">os Module</a></li>
+        </ul>
+      </div>
+      <div class="toc-lesson">
+        <a href="#lesson-3.3a">3.3a: Use Classes- Draw Turtles</a>
+        <ul>
+          <li><a href="#lesson-3.3a-1">Classes</a></li>
+          <li><a href="#lesson-3.3a-2">Turtles</a></li>
+          <li><a href="#lesson-3.3a-3">Building Blueprint Analogy</a>
+        </ul>
+      </div>
+    </div>
+    <div class="toc-sub">
+      <div class="toc-lesson">
+        <a href="#lesson-3.3b">3.3b: Use Classes- Send Text</a>
+        <ul>
+          <li><a href="#lesson-3.3b-1">Twilio</a></li>
+          <li><a href="#lesson-3.3b-2">Importing TwilioRestClient</a></li>
+        </ul>
+      </div>
+      <div class="toc-lesson">
+        <a href="#lesson-3.3c">3.3c: Use Classes- Profanity Editor</a>
+        <ul>
+          <li><a href="#lesson-3.3c-1">Reading from a File</a></li>
+          <li><a href="#lesson-3.3c-2">urllib Module</a></li>
+        </ul>
+      </div>
+      <div class="toc-lesson">
+        <a href="#lesson-3.4a">3.4a: Make Classes- Movie Website</a>
+        <ul>
+          <li><a href="#lesson-3.4a-1">Google Python Style Guide</a></li>
+          <li><a href="#lesson-3.4a-2">Defining Classes</a></li>
+          <li><a href="#lesson-3.4a-3">Definitions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="toc-sub">
+      <div class="toc-lesson-blank">
+      </div>
+      <div class="toc-lesson">
+        <a href="#lesson-3.4b">3.4b: Make Classes- Advanced Topic</a>
+        <ul>
+          <li><a href="#lesson-3.4b-1">Class Variables</a></li>
+          <li><a href="#lesson-3.4b-2">__doc__, __name__ and __module__</a></li>
+          <li><a href="#lesson-3.4b-3">Inheritance</a></li>
+
+
+
+        </ul>
+      </div>
+      <div class="toc-lesson-blank">
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <h1>Notes</h1>
+    <div class="lesson">
+      <h2 id="lesson-3.1">3.1: Introduction to Abstraction</h2>
+      <div id="lesson-3.1-1">
+        <h3>Review of If Statements, Loops and Functions</h3>
+        <ol>
+          <li><a target="_blank" href="http://www.tutorialspoint.com/python/python_if_else.htm">If Statements Review</a></li>
+          <li><a target="_blank" href="http://www.tutorialspoint.com/python/python_while_loop.htm">Loops Review</a></li>
+          <li><a target="_blank" href="http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/functions.html">Functions Review</a></li>
+        </ol>
+      </div>
+    </div>
+    <div class="lesson">
+      <h2 id="lesson-3.2">3.2: Use Functions</h2>
+      <div id="lesson-3.2-1">
+        <h3>Launching Python (Mac)</h3>
+        <p>
+          Click the magnifying glass icon and search for "IDLE." This opens the Python Shell. From here you can open an existing Python document or create a new Python document under the File menu.
+        </p>
+      </div>
+      <div id="lesson-3.2-2">
+        <h3>Python Code to Open Website in a New Web Browser Window</h3>
+        <p class="indent">
+          import webbrowser<br>
+          webbrowser.open("http://www.youtube.com")
+        </p>
+        <p>
+          "Webbrowser" is a module in the Python standard library and must be imported to use it.
+      </div>
+      <div id="lesson-3.2-3">
+        <h3>Python Code to Suspend the Program for a Given Time</h3>
+        <p class="indent">
+          import time<br>
+          time.sleep(10)
+        </p>
+        <P>
+          This counts in seconds, so the program suspends for 10 seconds in this example.<br>
+          "Time" is  module in the Python standard library and must be imported to use it.
+        </P>
+      </div>
+      <div id="lesson-3.2-4">
+        <h3>Python Standard Library</h3>
+        <p>
+          The <a href="https://docs.python.org/2.7/library/index.html">Python Standard Library</a> is a list of the modules that are built into Python.
+        </p>
+      </div>
+      <div id="lesson-3.2-5">
+        <h3>Abstraction</h3>
+        <p>
+          Abstraction is hiding of detail in programming. Example: We know we can use "webbrowser" to open a browser page, but the details of how it works are hidden.
+        </p>
+        <p>
+          This allows us to focus on the program we want to write.
+        </p>
+      </div>
+      <div id="lesson-3.2-6">
+        <h3>os Module</h3>
+        <p>
+          Methods that can be called after importing the os module:
+        </p>
+        <p>
+          os.listdir("location of folder on computer")<br>
+          <em>Lists the files within the folder.</em>
+        </p>
+        <P>
+          os.getcwd()<br>
+          <em>Gives you the folder the computer is currently working with (current working directory).</em>
+        </p>
+        <p>
+          os.chdir("location of folder on computer")<br>
+          <em>Changes the CWD to the folder named in the parentheses.</em>
+        </p>
+        <p>
+          os.rename(file_name, file_name.translate(None, "0123456789"))<br>
+          <em>In this example, the numbers in the file name would be removed and replaced with nothing.</em>
+        </p>
+      </div>
+    </div>
+    <div class="lesson">
+      <h2 id="lesson-3.3a">3.3a: Use Classes- Draw Turtles</h2>
+      <div id="lesson-3.3a-1">
+        <h3>Classes</h3>
+        <p>
+          Classes are templates. They are a way to make copies of something without making multiple files. 
+        </p>
+      </div>
+      <div id="lesson-3.3a-2">
+        <h3>Turtles</h3>
+        <p>
+          turtle.Turtle()<br>
+          Here, "Turtle" is a class within the module "turtle."
+        </p>
+        <p>
+          brad=turtle.Turtle()<br>
+          This creates in instance of the class Turtle.
+        </p>
+      </div>
+      <div id="lesson-3.3a-3">
+        <h3>Building Blueprint Analogy</h3>
+        <p>
+          A <em>class</em> is a blueprint of a building. It includes information about the height of the building, number of rooms, etc.
+        </p>
+        <p>
+          The same blueprint can be used to build multiple buildings that may differ by wall color, decorations, etc. The different buildings are <em>instances</em> of the blueprint. They are also called <em>objects</em>.
+        </P>
+      </div>
+    </div>
+    <div class="lesson">
+      <h2 id="lesson-3.3b">3.3b: Use Classes- Send Text</h2>
+      <div id="lesson-3.3b-1">
+        <h3>Twilio</h3>
+        <p>
+          In addition to the Python Standard Library, you can use other pre-made modules by downloading them. One of these is Twilio, which is a Python package that lets you send text messages using code.
+        </p>
+      </div>
+      <div id="lesson-3.3b-2">
+        <h3>Importing TwilioRestClient</h3>
+        <p>
+          from twilio.rest import TwilioRestClient
+        </p>
+        <p>
+          Inside Twilio there is a folder called "rest." Inside rest is a class called "TwilioRestClient." Using this code imports the class from the specific folder where it is located.
+        </p>
+        <p>
+          When we call the class TwilioRestClient in our program, we are really calling the __init__ function inside the class, which creates an instance of the class.
+        </p>
+      </div>
+    </div>
+    <div class="lesson">
+      <h2 id="lesson-3.3c">3.3c: Use Classes- Profanity Editor</h2>
+      <div id="lesson-3.3c-1">
+        <h3>Reading from a File</h3>
+        <p>
+          Code to pull text from an outside file and print it:
+        </p>
+        <p>
+          def read_text():<br>
+          <span class="indent">quotes = open("file location on computer")</span><br>
+          <span class="indent">contents_of_file = quotes.read()</span><br>
+          <span class="indent">print (contents_of_file)</span><br>
+          <span class="indent">quotes.close()</span>
+        </p>
+        <p>
+          After the file is opened, the method "read" is used to read what's in it. When done with something you opened, you should always close it.
+        </p>
+      </div>
+      <div id="lesson-3.3c-2">
+        <h3>urllib Module</h3>
+        <p>
+          urllib lets you pull information from a website.
+        </p>
+        <p>
+          def check_profanity(text_to_check):<br>
+          <span class="indent">connection = urllib.urlopen(http://www.wdyl.com/profanity?q=" + text_to_check)</span><br>
+          <span class="indent">output = connection.read()</span><br>
+          <span class="indent">print(output)</span><br>
+          <span class="indent">connection.close()</span>
+        </p>
+        <p>
+          In this code, the method urlopen opens a website that checks for profanity and returns a true or false value. It reads the text (text_to_check) that the program has read from an outside file and tells you whether or not it contains profanity.
+        </p>
+      </div>
+    </div>
+    <div class="lesson">
+      <h2 id="lesson-3.4a">3.4a: Make Classes- Movie Website</h2>
+      <div id="lesson-3.4a-1">
+        <h3>Google Python Style Guide</h3>
+        <p>
+          This <a href="http://google-styleguide.googlecode.com/svn/trunk/pyguide.html">guide</a> provides conventions (how to name things, how to write comments, etc.) for programmers when writing programs.
+        </p>
+      </div>
+      <div id="lesson-3.4a-2">
+        <h3>Defining Classes</h3>
+        <p>
+          You can define your own classes (and normally save them in their own file that you will import) to use for your program.
+        </p>
+        <p>
+          class Movie():<br>
+          <span class="indent">def __init__(self, movie_title, movie_storyline, poster_image, trailer_youtube):</span><br>
+          <span class="dbl-indent">self.title = movie_title</span><br>
+          <span class="dbl-indent">self.storyline = movie_storyline</span><br>
+          <span class="dbl-indent">self.poster_image_url = poster_image</span><br>
+          <span class="dbl-indent">self.trailer_youtube = trailer_youtube</span>
+        </p>
+        <p>
+          "Self" means that the class creates instances of itself. To use this class, you would write code that calls it to create a Movie object with the four given variables.
+        </p>
+      </div>
+      <div id="lesson-3.4a-3">
+        <h3>Definitions</h3>
+        <p>
+          Class - like a blueprint; can have both data and methods (ex: Movie)
+        </p>
+        <p>
+          Instances - different examples of a class (ex: Toy Story)
+        </p>
+        <p>
+          Constructor - called when we create an instance of a class; __init__ method is used inside the class; we initialize all of the data used within the instance
+        </p>
+        <p>
+          Self - the instance in question (ex: when Toy Story is being created, self is Toy Story)
+        </p>
+        <p>
+          Instance Variables - all the variables associated with a specific instance; unique to an object and can be accessed using the self keyword insude the class and the instance name outside the class
+        </p>
+        <p>
+          Instance Methods - all the functions inside the class that are associated with an instance and have the first argument as self
+        </p>
+      </div>
+    </div>
+    <div class="lesson">
+      <h2 id="lesson-3.4b">3.4a: Make Classes- Advanced Topic</h2>
+      <div id="lesson-3.4b-1">
+        <h3>Class Variables</h3>
+        <p>
+          Class variables are variables that all instances in a class share. You don't have to define them every time you create a new instance. The Google style guide says to use all CAPS for these.
+        </p>
+      </div>
+      <div id="lesson-3.4b-2">
+        <h3>__doc__, __name__ and __module__</h3>
+        <p>
+          __doc__<br>
+          Calling this returns a document string that has been defined in a class.
+        </p>
+        <p>
+          __name__<br>
+          Calling this returns the name of the class.
+        </p>
+        <p>
+          __module__<br>
+          Calling this returns the name of the module in which the class was defined.
+        </p>
+      </div>
+      <div id="lesson-3.4b-3">
+        <h3>Inheritance</h3>
+        <p>
+          A child class inherits traits from a parent class. When you call the child class, it will in turn call the parent class and pull properties from it.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
